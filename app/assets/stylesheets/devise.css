@@ -1,0 +1,23 @@
+.form-signin, .form-signin-heading {
+  width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder {
+   text-align: center;
+}
+
+.devise_links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.box_devise {
+  margin-top: 10%;
+}

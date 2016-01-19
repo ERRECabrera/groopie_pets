@@ -1,0 +1,42 @@
+<%= form_for @pet, url: pets_form_path(@pet), method: :post, html: {class: ""} do |f| %>
+  <div class="form-group">
+    
+    <%= f.hidden_field :id, value: @pet.id %>
+    
+    <%= f.label :name, :class => 'sr-only' %><br />
+    <div class="input-group">
+      <div class="input-group-addon">Pet's name</div>
+      <%= f.text_field :name, :class => 'form-control', autofocus: true %>
+    </div>
+    
+    <%= f.label :animal, :class => 'sr-only' %><br />
+    <div class="input-group">
+      <div class="input-group-addon">Type</div>
+      <% options = Pet.animal_species.map { |animal| [animal.capitalize, animal]} %>
+      <%= f.select :animal, options_for_select(options, @pet.animal), {:prompt => "select a category : "}, {:required => true, :class => 'form-control'} %>
+    </div>
+
+    <%= f.label :age, :class => 'sr-only' %><br />
+    <div class="input-group">
+      <div class="input-group-addon">Age's pet</div>
+      <%= f.number_field :age, :class => 'form-control', min: 0 %>
+    </div>
+    
+    <%= f.label :image, :class => 'sr-only' %><br />
+    <div class="center-block">
+      <div class="btn btn-primary btn-lg btn-block center-block" onclick="$(this).parent().find('input[type=file]').click();">Upload image</div>
+      <%= f.file_field :image, onchange: "$(this).parent().parent().find('#image_input_text').html($(this).val().split(/[\\\\|/]/).pop());", style: "display: none;" %>
+      <%= image_tag(@pet.image.url(:thumb), class: "img-responsive img-thumbnail center-block", alt: "no image load" ) %>
+      <div id="image_input_text" class="form-control"></div>
+    </div>
+    
+  </div>
+
+  <% if @pet.id == nil %>
+    <%= f.submit "Save", name: "create", class: "btn btn-primary btn-lg btn-block" %>
+  <% else %>
+    <%= f.submit "Update", name: "update", class: "btn btn-success btn-lg btn-block" %>
+    <%= f.submit "Delete", name: "destroy", class: "btn btn-danger btn-lg btn-block" %>
+  <% end %>
+
+<% end %>

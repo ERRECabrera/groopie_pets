@@ -1,0 +1,41 @@
+<% if devise_error_messages!.size > 1 %>
+  <div class="alert alert-danger text-center" >
+    <%= devise_error_messages! %>  
+  </div>
+<% end %>
+
+<div class="box_devise">
+  <h2 class="form-signin-heading">SIGN UP</h2>
+
+  <%= form_for(resource, as: resource_name, :html => {:class => 'form-signin'}, url: registration_path(resource_name)) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, :class => 'form-control', :placeholder => 'your name', autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email%><br />
+      <%= f.email_field :email, :class => 'form-control', :placeholder => 'email address' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password%>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", :class => 'form-control', :placeholder => 'password' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control', :placeholder => 'repeat the password' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", :class => 'btn btn-lg btn-primary btn-block' %>
+    </div>
+  <% end %>
+</div>
+
+<%= render "devise/shared/links" %>
