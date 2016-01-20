@@ -1,9 +1,9 @@
 class Pet < ActiveRecord::Base
-  has_attached_file :image, styles: { thumb: "400x400" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image, styles: { thumb: "100x100>", zoom:"400x400>" }, default_url: "/images/:style/missing.png"
   
   validates_attachment_content_type :image, content_type: /\Aimage.*\Z/
   validates_attachment_presence :image, attachment_presence: true
-  validates_attachment_size :image, :less_than => 10.megabyte
+  validates_attachment_size :image, :less_than => 15.megabyte
 
   validates :name, :animal, :user_id, presence: true
   validates :name, length: { maximum: 15 }
@@ -26,15 +26,15 @@ class Pet < ActiveRecord::Base
   end
 
   def name_user
-    User.find_by(user.id).name
+    User.find_by_id(self.user_id).name
   end
 
-  def image_thumb_url
-    image.url(:thumb)
-  end
-
-  def image_original_url
-    image.url(:original)
+  def images_urls
+    images = {
+      original: image.url(:original),
+      zoom: image.url(:zoom),
+      thumb: image.url(:thumb) 
+    }    
   end
 
 end

@@ -1,4 +1,4 @@
-<%= form_for @pet, url: pets_form_path(@pet), method: :post, html: {class: ""} do |f| %>
+<%= form_for @pet, url: pets_create_path(@pet), method: :post, html: {class: ""} do |f| %>
   <div class="form-group">
     
     <%= f.hidden_field :id, value: @pet.id %>
@@ -24,19 +24,19 @@
     
     <%= f.label :image, :class => 'sr-only' %><br />
     <div class="center-block">
-      <div class="btn btn-primary btn-lg btn-block center-block" onclick="$(this).parent().find('input[type=file]').click();">Upload image</div>
-      <%= f.file_field :image, onchange: "$(this).parent().parent().find('#image_input_text').html($(this).val().split(/[\\\\|/]/).pop());", style: "display: none;" %>
-      <%= image_tag(@pet.image.url(:thumb), class: "img-responsive img-thumbnail center-block", alt: "no image load" ) %>
+      <div id="btn-image" class="btn btn-primary btn-lg btn-block center-block">Upload image</div>
+      <%= f.file_field :image, style: "display: none;", id: "input-img-file" %>
+      <%= image_tag(@pet.image.url(:thumb), class: "img-responsive img-thumbnail center-block", alt: "no image load", id: "form-img-sample" ) %>
       <div id="image_input_text" class="form-control"></div>
     </div>
     
   </div>
 
   <% if @pet.id == nil %>
-    <%= f.submit "Save", name: "create", class: "btn btn-primary btn-lg btn-block" %>
-  <% else %>
-    <%= f.submit "Update", name: "update", class: "btn btn-success btn-lg btn-block" %>
-    <%= f.submit "Delete", name: "destroy", class: "btn btn-danger btn-lg btn-block" %>
+    <%= f.submit "Save", name: "commit", class: "btn btn-primary btn-lg btn-block button-form" %>
+  <% elsif current_user.id == @pet.user_id %>
+    <%= f.submit "Update", name: "commit", class: "btn btn-success btn-lg btn-block update-form" %>
+    <%= f.submit "Delete", name: "commit", class: "btn btn-danger btn-lg btn-block delete-form" %>
   <% end %>
 
 <% end %>

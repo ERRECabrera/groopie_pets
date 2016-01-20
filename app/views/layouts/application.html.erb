@@ -7,24 +7,12 @@
   <meta content="Enseña tus mascotas a otros usuarios." name="description">
   <meta content="Raúl Cabrera Medina" name="author">
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <body>
   <div class="container-fluid">
-    <!-- to use with devise -->
-    <% if notice %>
-      <p class="notice alert alert-info text-center"><%= notice %></p>
-    <% elsif alert %>
-      <p class="alert alert-danger text-center"><%= alert %></p>
-    <% end %>
     <%= yield %>
-    <% if current_user %>
-      <div class="devise_links">
-        <%= link_to "Log out", destroy_user_session_path(current_user), :method => 'delete' %>
-      </div>
-    <% end %>
   </div>
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>

@@ -75,12 +75,10 @@ RSpec.describe Pet, type: :model do
       expect(last_animal).to eq(Pet.last)
     end
 
-    it '.image_thumb_url return image.url' do
-      expect(@pet.image_thumb_url).to be_a_kind_of(String)
-    end
-
-    it '.image_original_url return image.url' do
-      expect(@pet.image_original_url).to be_a_kind_of(String)
+    it '.images_urls return hash with all urls img_styles' do
+      expect(@pet.images_urls[:original]).to be_a_kind_of(String)
+      expect(@pet.images_urls[:zoom]).to be_a_kind_of(String)
+      expect(@pet.images_urls[:thumb]).to be_a_kind_of(String)
     end
     
   end

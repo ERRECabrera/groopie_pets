@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   #API request body.html
   post 'pets/modal_form' => 'pets#get_modal_form'
 
-
-  #Manage actions to create, update and destroy pets
-  post 'pets/form' => 'pets#controller_form'
+  post 'pets/create' => 'pets#create'
+  post 'pets/update' => 'pets#update'
+  post 'pets/destroy' => 'pets#destroy'
 
 
 

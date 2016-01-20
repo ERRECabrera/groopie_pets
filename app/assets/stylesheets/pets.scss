@@ -1,3 +1,49 @@
 // Place all the styles related to the pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.row {
+  margin: auto;
+}
+
+.picture {
+  cursor: not-allowed;
+}
+
+.link_to_form {
+  cursor: pointer;
+}
+
+.alert{
+  height: 50px;
+}
+
+blockquote p {
+  font-size: 3.5em;
+}
+
+blockquote footer {
+  font-size: 1.2em;
+}
+
+form {
+  width: 95%;
+  margin: auto;
+}
+
+#form-img-sample {
+  width: 100%;
+}
+
+#plus-pet {
+  position: absolute;
+  top: 171px;
+  background-color: red;
+  color: white;
+  left: 13%;
+  width: 16%;
+  height: 60px;
+  text-align: center;
+  font-size: 4.5em;
+  line-height: 100%;
+  cursor: pointer;
+}
