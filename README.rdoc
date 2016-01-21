@@ -1,28 +1,5 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+La aplicación requiere dos modelos: User y Pet, con una relación de 1:n entre ambas.
+En un principio se había diseñado para ser una single page sin necesidad de recarga, los controladores prácticamente se comportaban como una API, pero esto generó problemas con las vistas.
+La petición ajax de todas las mascotas funciona pero los controladores de acciones como create, update y destroy daban problemas y requerían renderizar de una vista propia o un objeto json. Agotadas las soluciones opté por..
+Solución fuera de fecha: Cambiar el diseño por una pseudo single page con redirección en la acciones create, update y destroy a la página principal.
+Aunque el foco no estaba en el front se ha intentado también desarrollar mínimamente esta parte aunque existen problemas pendientes para la correcta gestión de los eventos en javascript.
