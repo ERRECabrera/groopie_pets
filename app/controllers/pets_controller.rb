@@ -38,28 +38,17 @@ class PetsController < ApplicationController
     render 'form'
   end
 
-=begin  
-  def controller_form
-    session[:pet_data] = pet_params
-    if params[:commit] == "Save"
-      create
-    elsif params[:commit] == "Update"
-      update
-    elsif params[:commit] == "Delete"
-      destroy
-    else
-      render status: :not_found, :json => { error: "not_found"}
-    end
-  end
-=end
-  
   def create
     user = User.find_by_id(current_user.id)
     pet = user.pets.create(pet_params)
     if pet.save
-      render status: :created, json: user.pets.last.to_json
+      #render status: :created, json: user.pets.last.to_json
+      flash[:notice] = 'Pet created'
+      redirect_to(root_path)
     else
-      render status: :unprocessable_entity, :json => { error: "unprocessable"}
+      #render status: :unprocessable_entity, :json => { error: "unprocessable"}
+      flash[:alert] = 'Error: Unprocessable entity'
+      redirect_to(root_path)
     end
   end
 
@@ -69,12 +58,18 @@ class PetsController < ApplicationController
     if pet_values[:id]
       pet = user.pets.find_by_id(pet_values[:id])
       if pet.update_attributes(pet_params)
-        render status: :accepted, :json => pet.to_json
+        #render status: :accepted, :json => pet.to_json
+        flash[:notice] = 'Pet updated'
+        redirect_to(root_path)
       else
-        render status: :unprocessable_entity, :json => { error: "unprocessable"}
+        #render status: :unprocessable_entity, :json => { error: "unprocessable"}
+        flash[:alert] = 'Error: Unprocessable entity'
+        redirect_to(root_path)
       end
     else
-      render status: :not_found, :json => { error: "not_found"}
+      #render status: :not_found, :json => { error: "not_found"}
+      flash[:alert] = 'Error: Pet not found'
+      redirect_to(root_path)
     end
   end
 
@@ -84,12 +79,18 @@ class PetsController < ApplicationController
     if pet_values[:id]
       pet = user.pets.find_by_id(pet_values[:id])
       if pet.destroy
-        render status: :ok, :json => nil.to_json
+        #render status: :ok, :json => nil.to_json
+        flash[:notice] = 'Pet deleted'
+        redirect_to(root_path)
       else
-        render status: :unprocessable_entity, :json => { error: "unprocessable"}
+        #render status: :unprocessable_entity, :json => { error: "unprocessable"}
+        flash[:alert] = 'Error: Unprocessable entity'
+        redirect_to(root_path)
       end
     else
-      render status: :not_found, :json => { error: "not_found"}
+      #render status: :not_found, :json => { error: "not_found"}
+      flash[:alert] = 'Error: Pet not found'
+      redirect_to(root_path)
     end
   end
 
