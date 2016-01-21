@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-20T15:17:55+01:00">2016-01-20T15:17:55+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-21T13:55:05+01:00">2016-01-21T13:55:05+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.22%</span></span>
+    (<span class="covered_percent"><span class="green">97.95%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.45
+         1.44
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>30</b> files in total.
-    <b>338</b> relevant lines. 
-    <span class="green"><b>332</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed </span>
+    <b>342</b> relevant lines. 
+    <span class="green"><b>335</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#209ce1efeae8d3d94c0a49f667c7335d4f1a6ed2" class="src_link" title="app/controllers/pets_controller.rb">app/controllers/pets_controller.rb</a></td>
-        <td class="green strong">97.96 %</td>
-        <td>102</td>
-        <td>49</td>
-        <td>48</td>
-        <td>1</td>
-        <td>1.8</td>
+        <td class="green strong">96.49 %</td>
+        <td>103</td>
+        <td>57</td>
+        <td>55</td>
+        <td>2</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -263,9 +263,9 @@
       <tr>
         <td class="strong"><a href="#f4281d328e0d1c8ae43ef448f0d55d3fdb973c87" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>79</td>
-        <td>11</td>
-        <td>11</td>
+        <td>76</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -283,9 +283,9 @@
       <tr>
         <td class="strong"><a href="#dd20a7aa6ad5b372ee64fe9d4af429caa8e66c12" class="src_link" title="spec/controllers/pets_controller_spec.rb">spec/controllers/pets_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>168</td>
-        <td>94</td>
-        <td>94</td>
+        <td>171</td>
+        <td>91</td>
+        <td>91</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -549,11 +549,11 @@
         <div class="source_table" id="209ce1efeae8d3d94c0a49f667c7335d4f1a6ed2">
   <div class="header">
     <h3>app/controllers/pets_controller.rb</h3>
-    <h4><span class="green">97.96 %</span> covered</h4>
+    <h4><span class="green">96.49 %</span> covered</h4>
     <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>48</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>57</b> relevant lines. 
+      <span class="green"><b>55</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -800,70 +800,70 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">=begin  </code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="covered" data-hits="3" data-linenumber="42">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  def controller_form</code>
+          <code class="ruby">    user = User.find_by_id(current_user.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="covered" data-hits="3" data-linenumber="43">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">    session[:pet_data] = pet_params</code>
+          <code class="ruby">    pet = user.pets.create(pet_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="3" data-linenumber="44">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">    if params[:commit] == &quot;Save&quot;</code>
+          <code class="ruby">    if pet.save</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">      create</code>
+          <code class="ruby">      #render status: :created, json: user.pets.last.to_json</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    elsif params[:commit] == &quot;Update&quot;</code>
+          <code class="ruby">      flash[:notice] = &#39;Pet created&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">      update</code>
+          <code class="ruby">      redirect_to(root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">    elsif params[:commit] == &quot;Delete&quot;</code>
+          <code class="ruby">    else</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">      destroy</code>
+          <code class="ruby">      #render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    else</code>
+          <code class="ruby">      flash[:alert] = &#39;Error: Unprocessable entity&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      render status: :not_found, :json =&gt; { error: &quot;not_found&quot;}</code>
+          <code class="ruby">      redirect_to(root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -881,19 +881,19 @@
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">=end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create</code>
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="56">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    pet_values = pet_params</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="57">
@@ -905,268 +905,274 @@
         <li class="covered" data-hits="3" data-linenumber="58">
           <span class="hits">3</span>
           
-          <code class="ruby">    pet = user.pets.create(pet_params)</code>
+          <code class="ruby">    if pet_values[:id]</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="59">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="59">
+          <span class="hits">2</span>
           
-          <code class="ruby">    if pet.save</code>
+          <code class="ruby">      pet = user.pets.find_by_id(pet_values[:id])</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="60">
           <span class="hits">2</span>
           
-          <code class="ruby">      render status: :created, json: user.pets.last.to_json</code>
+          <code class="ruby">      if pet.update_attributes(pet_params)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">        #render status: :accepted, :json =&gt; pet.to_json</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">      render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
+          <code class="ruby">        flash[:notice] = &#39;Pet updated&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        redirect_to(root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      else</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        #render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update</code>
+          <code class="ruby">        flash[:alert] = &#39;Error: Unprocessable entity&#39;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="67">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
-          <code class="ruby">    pet_values = pet_params</code>
+          <code class="ruby">        redirect_to(root_path)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="68">
-          <span class="hits">3</span>
+        <li class="never" data-hits="" data-linenumber="68">
           
-          <code class="ruby">    user = User.find_by_id(current_user.id)</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="69">
-          <span class="hits">3</span>
+        <li class="never" data-hits="" data-linenumber="69">
           
-          <code class="ruby">    if pet_values[:id]</code>
+          
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="70">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="70">
           
-          <code class="ruby">      pet = user.pets.find_by_id(pet_values[:id])</code>
+          
+          <code class="ruby">      #render status: :not_found, :json =&gt; { error: &quot;not_found&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="71">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
           
-          <code class="ruby">      if pet.update_attributes(pet_params)</code>
+          <code class="ruby">      flash[:alert] = &#39;Error: Pet not found&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
-          <code class="ruby">        render status: :accepted, :json =&gt; pet.to_json</code>
+          <code class="ruby">      redirect_to(root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">      else</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="74">
           
-          <code class="ruby">        render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      render status: :not_found, :json =&gt; { error: &quot;not_found&quot;}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="82">
+        <li class="covered" data-hits="2" data-linenumber="77">
           <span class="hits">2</span>
           
           <code class="ruby">    pet_values = pet_params</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="83">
+        <li class="covered" data-hits="2" data-linenumber="78">
           <span class="hits">2</span>
           
           <code class="ruby">    user = User.find_by_id(current_user.id)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="84">
+        <li class="covered" data-hits="2" data-linenumber="79">
           <span class="hits">2</span>
           
           <code class="ruby">    if pet_values[:id]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
           <code class="ruby">      pet = user.pets.find_by_id(pet_values[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">      if pet.destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="82">
           
-          <code class="ruby">        render status: :ok, :json =&gt; nil.to_json</code>
+          
+          <code class="ruby">        #render status: :ok, :json =&gt; nil.to_json</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        flash[:notice] = &#39;Pet deleted&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        redirect_to(root_path)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">        render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
+          <code class="ruby">        #render status: :unprocessable_entity, :json =&gt; { error: &quot;unprocessable&quot;}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
+          
+          <code class="ruby">        flash[:alert] = &#39;Error: Unprocessable entity&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="88">
+          
+          
+          <code class="ruby">        redirect_to(root_path)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">    else</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">      #render status: :not_found, :json =&gt; { error: &quot;not_found&quot;}</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
-          <code class="ruby">      render status: :not_found, :json =&gt; { error: &quot;not_found&quot;}</code>
+          <code class="ruby">      flash[:alert] = &#39;Error: Pet not found&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      redirect_to(root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="96">
+        <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
           <code class="ruby">private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
           <code class="ruby">  def pet_params</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="99">
+        <li class="covered" data-hits="11" data-linenumber="100">
           <span class="hits">11</span>
           
           <code class="ruby">    params.require(:pet).permit(:id, :name, :animal, :age, :image) </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="102">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">end</code>
@@ -4319,8 +4325,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4418,52 +4424,52 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  #Manage actions to create, update and destroy pets</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  post &#39;pets/form&#39; =&gt; &#39;pets#controller_form&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">  post &#39;pets/create&#39; =&gt; &#39;pets#create&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  post &#39;pets/update&#39; =&gt; &#39;pets#update&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">  post &#39;pets/destroy&#39; =&gt; &#39;pets#destroy&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
@@ -4475,13 +4481,13 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
+          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
+          <code class="ruby">  # root &#39;welcome#index&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -4493,13 +4499,13 @@
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
+          <code class="ruby">  # Example of regular route:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  # root &#39;welcome#index&#39;</code>
+          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
@@ -4511,13 +4517,13 @@
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  # Example of regular route:</code>
+          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
+          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -4529,13 +4535,13 @@
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
+          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
+          <code class="ruby">  #   resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
@@ -4547,256 +4553,238 @@
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
+          <code class="ruby">  # Example resource route with options:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">  #   resources :products</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #     member do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  # Example resource route with options:</code>
+          <code class="ruby">  #       get &#39;short&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #       post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  #     member do</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  #       get &#39;short&#39;</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  #       post &#39;toggle&#39;</code>
+          <code class="ruby">  #     collection do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #       get &#39;sold&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  #     collection do</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">  #       get &#39;sold&#39;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  # Example resource route with sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #     resources :comments, :sales</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">  # Example resource route with sub-resources:</code>
+          <code class="ruby">  #     resource :seller</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">  #     resources :comments, :sales</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">  #     resource :seller</code>
+          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #     resources :comments</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
+          <code class="ruby">  #     resources :sales do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">  #     resources :comments</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">  #     resources :sales do</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  # Example resource route with concerns:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #   concern :toggleable do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #     post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">  # Example resource route with concerns:</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">  #   concern :toggleable do</code>
+          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">  #     post &#39;toggle&#39;</code>
+          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
+          <code class="ruby">  # Example resource route within a namespace:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
+          <code class="ruby">  #   namespace :admin do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  # Example resource route within a namespace:</code>
+          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  #   namespace :admin do</code>
+          <code class="ruby">  #     resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
-          
-          
-          <code class="ruby">  #     resources :products</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
           <code class="ruby">  #   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby">end</code>
@@ -4859,8 +4847,8 @@
     <h3>spec/controllers/pets_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>94</b> relevant lines. 
-      <span class="green"><b>94</b> lines covered</span> and
+      <b>91</b> relevant lines. 
+      <span class="green"><b>91</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5576,10 +5564,10 @@
           <code class="ruby">          expect(Pet.all.size).to eq(0)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="119">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="119">
           
-          <code class="ruby">          expect(response).to have_http_status(:unprocessable_entity)</code>
+          
+          <code class="ruby">          #expect(response).to have_http_status(:unprocessable_entity)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="120">
@@ -5636,10 +5624,10 @@
           <code class="ruby">          post :update, { :pet =&gt; {id: 1, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Update&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="129">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="129">
           
-          <code class="ruby">          expect(response).to have_http_status(:accepted)</code>
+          
+          <code class="ruby">          #expect(response).to have_http_status(:accepted)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="130">
@@ -5678,64 +5666,64 @@
           <code class="ruby">          post :update, { :pet =&gt; {id: 1, name: nil, animal: nil, age: nil, image: nil}, commit: &quot;Update&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="136">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="136">
           
-          <code class="ruby">          expect(response).to have_http_status(:unprocessable_entity)</code>
+          
+          <code class="ruby">          #expect(response).to have_http_status(:unprocessable_entity)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        end</code>
+          <code class="ruby">          expect(flash[:alert]).to be_present</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="139">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="139">
           
-          <code class="ruby">        it &#39;#INFO_PET have a PROBLEM with PET.ID&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="140">
           <span class="hits">1</span>
           
-          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+          <code class="ruby">        it &#39;#INFO_PET have a PROBLEM with PET.ID&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="141">
           <span class="hits">1</span>
           
-          <code class="ruby">          post :update, { :pet =&gt; {id: nil, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Update&quot; }</code>
+          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="142">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(response).to have_http_status(:not_found)</code>
+          <code class="ruby">          post :update, { :pet =&gt; {id: nil, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Update&quot; }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="143">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">          #expect(response).to have_http_status(:not_found)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="144">
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">          expect(flash[:alert]).to be_present</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="145">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
@@ -5744,106 +5732,106 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="147">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      describe &#39;#Destroy a:&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="148">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="149">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        it &#39;PET is DONE&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="150">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="151">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          post :destroy, { :pet =&gt; {id: 1, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Delete&quot; }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="152">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          expect(response).to have_http_status(:ok)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="153">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          expect(Pet.all.size).to eq(0)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="154">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="155">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="156">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        it &#39;PET have a PROBLEM with PET.ID&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="157">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="158">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          post :destroy, { :pet =&gt; {id: nil, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Delete&quot; }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="159">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          expect(response).to have_http_status(:not_found)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="160">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="161">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="147">
           
           
           <code class="ruby">      end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      describe &#39;#Destroy a:&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">        </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;PET is DONE&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          post :destroy, { :pet =&gt; {id: 1, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Delete&quot; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby">          #expect(response).to have_http_status(:ok)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(Pet.all.size).to eq(0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;PET have a PROBLEM with PET.ID&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, age: 11, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          post :destroy, { :pet =&gt; {id: nil, name: &quot;lola&quot;, animal: &quot;dog&quot;, age: 1, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;}, commit: &quot;Delete&quot; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">          #expect(response).to have_http_status(:not_found)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="162">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(flash[:alert]).to be_present</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="163">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="164">
@@ -5855,13 +5843,13 @@
         <li class="never" data-hits="" data-linenumber="165">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="166">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="167">
@@ -5871,6 +5859,24 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="169">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
           
           
           <code class="ruby">end</code>
