@@ -16,10 +16,10 @@
       <%= f.select :animal, options_for_select(options, @pet.animal), {:prompt => "select a category : "}, {:required => true, :class => 'form-control'} %>
     </div>
 
-    <%= f.label :age, :class => 'sr-only' %><br />
+    <%= f.label :birth, :class => 'sr-only' %><br />
     <div class="input-group">
       <div class="input-group-addon">Age's pet</div>
-      <%= f.number_field :age, :class => 'form-control', min: 0 %>
+      <%= f.date_select :birth, :class => 'form-control' %>
     </div>
     
     <%= f.label :image, :class => 'sr-only' %><br />

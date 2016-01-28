@@ -1,95 +1,103 @@
 class PetsController < ApplicationController
+  
   before_action :authenticate_user!
 
-  def get_all_list
-    pets_list = Pet.return_with_criterial(Pet.all,{id: :desc},100)
+  LIMIT_LIST = 30
+  DATAS_INCLUDE = {
+    :only => [:id, :name, :animal, :birth],
+    :methods => [:user_name, :images_urls, :age]
+  }
+
+  #get 'pets/all'
+  def index
+    pets_list = Pet.desc_sorted_by_id.limit(LIMIT_LIST)
     if pets_list.size > 0
-      render status: :ok, :json => pets_list.to_json(:only => [:id, :name, :animal, :age], :methods => [:name_user, :images_urls] )
+      render status: :ok, :json => pets_list.to_json(DATAS_INCLUDE)
     else
-      render status: :not_found, :json => { error: "not_found"}
+      render status: :not_found, :json => { error: "pets list not found"}
     end
   end
 
-  def get_user_list
-    user = User.find_by_id(current_user.id)
-    pets_list = Pet.return_with_criterial(user.pets,{id: :desc})
+  #get 'pets/user'
+  def return_user_pets
+    pets_list = current_user.pets.desc_sorted_by_id
     if pets_list.size > 0
-      render status: :ok, :json => pets_list.to_json(:only => [:id, :name, :animal, :age], :methods => [:name_user, :images_urls] )
+      render status: :ok, :json => pets_list.to_json(DATAS_INCLUDE)
     else
-      render status: :not_found, :json => { error: "not_found"}
+      render status: :not_found, :json => { error: "pets list not found"}
     end
   end
 
-  def get_info
+  #get 'pets/:id/info'
+  def show
     pet = Pet.find_by_id(params[:id])
     if pet
-      render status: :ok, json: pet.to_json(:only => [:id, :name, :animal, :age], :methods => [:name_user, :images_urls] )
+      render status: :ok, json: pet.to_json(DATAS_INCLUDE)
     else
-      render status: :not_found, :json => { error: "not_found"}
+      render status: :not_found, :json => { error: "pet not_found"}
     end
   end
 
-  def get_modal_form
+  #post 'pets/form'
+  def return_form
     if params[:pet]
       @pet = Pet.find_by_id(pet_params[:id])
     elsif
       @pet = Pet.new
     end
-    render 'form'
+    render 'form', layout: 'clean'
   end
 
+  #post 'pets/create'
   def create
-    user = User.find_by_id(current_user.id)
-    pet = user.pets.create(pet_params)
+    pet = current_user.pets.create(pet_params)
     if pet.save
-      #render status: :created, json: user.pets.last.to_json
       flash[:notice] = 'Pet created'
+      #render status: :created, json: pet.to_json #this is single page version
       redirect_to(root_path)
     else
-      #render status: :unprocessable_entity, :json => { error: "unprocessable"}
       flash[:alert] = 'Error: Unprocessable entity'
+      #render status: :unprocessable_entity, :json => { error: "unprocessable"} #this is single page version
       redirect_to(root_path)
     end
   end
 
+  #post 'pets/update'
   def update
-    pet_values = pet_params
-    user = User.find_by_id(current_user.id)
-    if pet_values[:id]
-      pet = user.pets.find_by_id(pet_values[:id])
+    if pet_params[:id]
+      pet = current_user.pets.find_by_id(pet_params[:id])
       if pet.update_attributes(pet_params)
-        #render status: :accepted, :json => pet.to_json
         flash[:notice] = 'Pet updated'
+        #render status: :accepted, :json => pet.to_json #this is single page version
         redirect_to(root_path)
       else
-        #render status: :unprocessable_entity, :json => { error: "unprocessable"}
         flash[:alert] = 'Error: Unprocessable entity'
+        #render status: :unprocessable_entity, :json => { error: "unprocessable"} #this is single page version
         redirect_to(root_path)
       end
     else
-      #render status: :not_found, :json => { error: "not_found"}
       flash[:alert] = 'Error: Pet not found'
+      #render status: :not_found, :json => { error: "not_found"} #this is single page version
       redirect_to(root_path)
     end
   end
 
+  #post 'pets/destroy'
   def destroy
-    pet_values = pet_params
-    user = User.find_by_id(current_user.id)
-    if pet_values[:id]
-      pet = user.pets.find_by_id(pet_values[:id])
+    if pet_params[:id]
+      pet = current_user.pets.find_by_id(pet_params[:id])
       if pet.destroy
-        #render status: :ok, :json => nil.to_json
         flash[:notice] = 'Pet deleted'
+        #render status: :ok, :json => nil.to_json #this is single page version
         redirect_to(root_path)
       else
-        #render status: :unprocessable_entity, :json => { error: "unprocessable"}
         flash[:alert] = 'Error: Unprocessable entity'
+        #render status: :unprocessable_entity, :json => { error: "unprocessable"} #this is single page version
         redirect_to(root_path)
       end
     else
-      #render status: :not_found, :json => { error: "not_found"}
       flash[:alert] = 'Error: Pet not found'
+      #render status: :not_found, :json => { error: "not_found"} #this is single page version
       redirect_to(root_path)
     end
   end
@@ -97,7 +105,7 @@ class PetsController < ApplicationController
 private
 
   def pet_params
-    params.require(:pet).permit(:id, :name, :animal, :age, :image) 
+    params.require(:pet).permit(:id, :name, :animal, :birth, :image) 
   end
 
 end

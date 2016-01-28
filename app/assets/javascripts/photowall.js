@@ -1,10 +1,16 @@
-function create_photowall(){
+function create_photowall(list_of_pets){
   var html = "";
-  pets_list.forEach(function(pet){
-    if($('#myForm').attr('data-name') == pet.name_user){
-      html += "<figure class='picture link_to_form' data-id='"+ pet['id'] +"' data-title='I am "+ pet['name'] +" - "+ pet.age +" years old' data-url='"+ pet.images_urls.zoom +"'></figure>";
+  list_of_pets.forEach(function(pet){
+    if($('#myForm').attr('data-name') == pet.user_name){
+      html += "<figure class='picture link_to_form' ";
+      html += "data-id='"+ pet['id'] +"' ";
+      html += "data-birth='"+  pet['birth']+"' ";
+      html += "data-title='I am "+ pet['name'] +" - "+ pet.age +" old' ";
+      html += "data-url='"+ pet.images_urls.zoom +"'></figure>";
     }else{
-      html += "<figure class='picture' data-title='I am "+ pet['name'] +" - "+ pet.age +" years old' data-url='"+ pet.images_urls.zoom +"'></figure>";
+      html += "<figure class='picture' ";
+      html += "data-title='I am "+ pet['name'] +" - "+ pet.age +" old' ";
+      html += "data-url='"+ pet.images_urls.zoom +"'></figure>";
     }
   });
   $('.gallery').html(html);

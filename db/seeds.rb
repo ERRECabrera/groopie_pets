@@ -33,13 +33,13 @@ pets_images = [
   "http://gifsec.com/wp-content/uploads/GIF/2015/12/A-pet-raven-GIF.gif"
 ]
 pet_category = %w{ cat cat dog dog dog rodent reptile rodent reptile dog exotic dog exotic bird dog cat dog rodent dog bird }
-pet_age_range = 1..15
+pet_age_range = (10.year.ago.to_date)..Date.today
 
 (0..19).each do |index|
   user = User.create(name: users_names[index], email: "#{users_names[index].downcase}@gmail.com", password: user_password, password_confirmation: user_password)
   user.save
   user = User.last
-  pet = user.pets.create(name: pets_names[index], animal: pet_category[index], age: rand(pet_age_range), image: pets_images[index])
+  pet = user.pets.create(name: pets_names[index], animal: pet_category[index], birth: rand(pet_age_range), image: pets_images[index])
   pet.save
 end
 

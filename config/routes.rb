@@ -6,13 +6,14 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   #API request json
-  get 'pets/all' => 'pets#get_all_list'
-  get 'pets/user' => 'pets#get_user_list'
-  get 'pets/:id/info' => 'pets#get_info'
+  get 'pets/all' => 'pets#index'
+  get 'pets/user' => 'pets#return_user_pets'
+  get 'pets/:id/info' => 'pets#show'
   
   #API request body.html
-  post 'pets/modal_form' => 'pets#get_modal_form'
+  post 'pets/form' => 'pets#return_form'
 
+  #NO API create/update/destroy
   post 'pets/create' => 'pets#create'
   post 'pets/update' => 'pets#update'
   post 'pets/destroy' => 'pets#destroy'

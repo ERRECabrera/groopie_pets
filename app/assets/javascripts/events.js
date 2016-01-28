@@ -1,4 +1,4 @@
-function modal_form_events(){
+function form_events(){
   
   $('#btn-image').on('click',function(){
     $('#input-img-file').click();
@@ -11,19 +11,15 @@ function modal_form_events(){
 
   manage_buttons();
 
+  empty_form_save();
+  empty_form_update_or_delete()
+
 };
 
-function load_modal_form(){
-
-  $('figure.link_to_form').on('click',function(event){
-    var id = $(event.currentTarget).attr('data-id');
-    $('figure.link_to_form').off('click');
-    get_html_form_from_api(id);
-  });
-
-  $('#plus-pet').on('click', function(){
-    get_html_form_from_api(null);
-  });
+function load_form(){
+  
+  update_a_pet();
+  add_a_new_pet();
 
 };
 
@@ -33,6 +29,3 @@ function log_out(){
   });
 };
 
-function add_a_new_pet(){
-  
-}

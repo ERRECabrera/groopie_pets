@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119023004) do
+ActiveRecord::Schema.define(version: 20160127213511) do
 
   create_table "pets", force: :cascade do |t|
     t.string   "name"
     t.string   "animal"
-    t.integer  "age"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
@@ -24,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160119023004) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.date     "birth"
   end
 
   add_index "pets", ["user_id"], name: "index_pets_on_user_id"
