@@ -1,5 +1,9 @@
 function create_photowall(list_of_pets){
   var html = "";
+  //button add pet
+  html += "<figure class='picture plus-pet'";
+  html += " data-title='add a pet' ";
+  html += "data-url='images/add_photo.jpg'></figure>";
   list_of_pets.forEach(function(pet){
     if($('#myForm').attr('data-name') == pet.user_name){
       html += "<figure class='picture link_to_form' ";

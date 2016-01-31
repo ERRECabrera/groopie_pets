@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-28T02:34:02+01:00">2016-01-28T02:34:02+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-31T03:32:01+01:00">2016-01-31T03:32:01+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.78%</span></span>
+    (<span class="covered_percent"><span class="green">97.63%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         184.9
+         185.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>30</b> files in total.
-    <b>360</b> relevant lines. 
-    <span class="green"><b>352</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>31</b> files in total.
+    <b>379</b> relevant lines. 
+    <span class="green"><b>370</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -112,12 +112,12 @@
       
       <tr>
         <td class="strong"><a href="#aae8eb2001f2464740620d4b6e83d157c2f2123c" class="src_link" title="app/models/pet.rb">app/models/pet.rb</a></td>
-        <td class="green strong">96.67 %</td>
-        <td>55</td>
-        <td>30</td>
-        <td>29</td>
-        <td>1</td>
-        <td>2203.5</td>
+        <td class="green strong">94.44 %</td>
+        <td>65</td>
+        <td>36</td>
+        <td>34</td>
+        <td>2</td>
+        <td>1941.2</td>
       </tr>
       
       <tr>
@@ -251,6 +251,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#b3243d88f16f3ce334014a30bc99b65db7b85cb4" class="src_link" title="config/initializers/validates_timeliness.rb">config/initializers/validates_timeliness.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>40</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#04564ad7dd2726113741bc1eb46fbf7c2fedad68" class="src_link" title="config/initializers/wrap_parameters.rb">config/initializers/wrap_parameters.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>14</td>
@@ -313,9 +323,9 @@
       <tr>
         <td class="strong"><a href="#ee994b66498f443f3c7e2cada06a53d25003810e" class="src_link" title="spec/models/pet_spec.rb">spec/models/pet_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>114</td>
-        <td>57</td>
-        <td>57</td>
+        <td>134</td>
+        <td>68</td>
+        <td>68</td>
         <td>0</td>
         <td>1.4</td>
       </tr>
@@ -1329,11 +1339,11 @@
         <div class="source_table" id="aae8eb2001f2464740620d4b6e83d157c2f2123c">
   <div class="header">
     <h3>app/models/pet.rb</h3>
-    <h4><span class="green">96.67 %</span> covered</h4>
+    <h4><span class="green">94.44 %</span> covered</h4>
     <div>
-      <b>30</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>36</b> relevant lines. 
+      <span class="green"><b>34</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -1436,14 +1446,14 @@
           <code class="ruby">  def instance_variables</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="17">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="17">
+          <span class="hits">24</span>
           
           <code class="ruby">    @user_name = user.name</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="18">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="18">
+          <span class="hits">24</span>
           
           <code class="ruby">    @images_urls = {</code>
         </li>
@@ -1472,8 +1482,8 @@
           <code class="ruby">    }</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="23">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="23">
+          <span class="hits">24</span>
           
           <code class="ruby">    @age = return_age_string</code>
         </li>
@@ -1508,163 +1518,223 @@
           <code class="ruby">  validates :animal, inclusion: { in: @@animal_species }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates_date :birth, :on_or_before =&gt; :today</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">  belongs_to :user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="32">
+        <li class="covered" data-hits="6" data-linenumber="33">
           <span class="hits">6</span>
           
           <code class="ruby">  scope :desc_sorted_by_id, -&gt; { all.order({id: :desc}) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
           <code class="ruby">  def return_age_string</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="35">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="36">
+          <span class="hits">24</span>
           
           <code class="ruby">    if self.birth</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="36">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="37">
+          <span class="hits">24</span>
           
           <code class="ruby">      number_years = Date.today.year - self.birth.year</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="37">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="38">
+          <span class="hits">24</span>
           
           <code class="ruby">      number_months = Date.today.month - self.birth.month</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">      #this conditions fix when the year change but days &lt; 364</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="40">
-          <span class="hits">21</span>
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">      #this condition fix when the year has changed but days &lt; 364</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="41">
+          <span class="hits">24</span>
           
           <code class="ruby">      range_date = self.birth..Date.today</code>
         </li>
       
-        <li class="covered" data-hits="65871" data-linenumber="41">
-          <span class="hits">65871</span>
+        <li class="covered" data-hits="69567" data-linenumber="42">
+          <span class="hits">69567</span>
           
           <code class="ruby">      number_days = range_date.reduce(0) {|s,d| s + 1}</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="42">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="43">
+          <span class="hits">24</span>
           
-          <code class="ruby">      condition_fix = number_days &lt; 364</code>
+          <code class="ruby">      condition_below_a_year_fix = number_days &lt; 364</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="44">
-          <span class="hits">21</span>
+        <li class="never" data-hits="" data-linenumber="45">
           
-          <code class="ruby">      if number_years == 0 || condition_fix</code>
+          
+          <code class="ruby">      #this condition show when age &lt; month</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="45">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="24" data-linenumber="46">
+          <span class="hits">24</span>
           
-          <code class="ruby">        number_months = 12 - number_months.abs if number_months &lt; 0</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="46">
-          <span class="hits">3</span>
-          
-          <code class="ruby">        age_string = &quot;#{number_months} months&quot;</code>
+          <code class="ruby">      condition_below_a_month_fix = Date.today.day &lt; self.birth.day &amp;&amp; number_months &lt;= 1 </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">      else</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="48">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="24" data-linenumber="48">
+          <span class="hits">24</span>
           
-          <code class="ruby">        age_string = &quot;#{number_years} years&quot;</code>
+          <code class="ruby">      if number_months == 0 &amp;&amp; number_years == 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        age_string = &quot;#{number_days} days&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="23" data-linenumber="50">
+          <span class="hits">23</span>
           
-          
-          <code class="ruby">    else</code>
+          <code class="ruby">      elsif number_years == 0 || condition_below_a_year_fix</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="51">
+        <li class="covered" data-hits="4" data-linenumber="51">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">      age_string = &#39;unknowed&#39;</code>
+          <code class="ruby">        if condition_below_a_month_fix</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="missed" data-hits="0" data-linenumber="52">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">          age_string = &quot;#{number_days} days&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="54">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          number_months = 12 - number_months.abs if number_months &lt; 0</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="55">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          age_string = &quot;#{number_months} months&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="58">
+          <span class="hits">19</span>
+          
+          <code class="ruby">        age_string = &quot;#{number_years} years&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
+          
+          <code class="ruby">      age_string = &#39;unknowed&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>
@@ -4356,6 +4426,264 @@
   </pre>
 </div>
       
+        <div class="source_table" id="b3243d88f16f3ce334014a30bc99b65db7b85cb4">
+  <div class="header">
+    <h3>config/initializers/validates_timeliness.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">ValidatesTimeliness.setup do |config|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # Extend ORM/ODMs for full support (:active_record included).</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.extend_orms = [ :active_record ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  # Default timezone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  # config.default_timezone = :utc</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  # Set the dummy date part for a time type values.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  # config.dummy_date_for_time_type = [ 2000, 1, 1 ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  # Ignore errors when restriction options are evaluated</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  # config.ignore_restriction_errors = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  # Re-display invalid values in date/time selects</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  # config.enable_date_time_select_extension!</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  # Handle multiparameter date/time values strictly</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  # config.enable_multiparameter_extension!</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  # Shorthand date and time symbols for restrictions</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  # config.restriction_shorthand_symbols.update(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  #   :now   =&gt; lambda { Time.current },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  #   :today =&gt; lambda { Date.current }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  # )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  # Use the plugin date/time parser which is stricter and extendable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  # config.use_plugin_parser = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">  # Add one or more formats making them valid. e.g. add_formats(:date, &#39;d(st|rd|th) of mmm, yyyy&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  # config.parser.add_formats()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  # Remove one or more formats making them invalid. e.g. remove_formats(:date, &#39;dd/mm/yyy&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  # config.parser.remove_formats()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  # Change the ambiguous year threshold when parsing a 2 digit year</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  # config.parser.ambiguous_year_threshold =  30</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  # Treat ambiguous dates, such as 01/02/1950, as a Non-US date.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  # config.parser.remove_us_formats</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="04564ad7dd2726113741bc1eb46fbf7c2fedad68">
   <div class="header">
     <h3>config/initializers/wrap_parameters.rb</h3>
@@ -6245,8 +6573,8 @@
     <h3>spec/models/pet_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>57</b> relevant lines. 
-      <span class="green"><b>57</b> lines covered</span> and
+      <b>68</b> relevant lines. 
+      <span class="green"><b>68</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6350,14 +6678,14 @@
           <code class="ruby">      before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="17">
+          <span class="hits">4</span>
           
           <code class="ruby">        user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
           
           <code class="ruby">        user.save</code>
         </li>
@@ -6452,22 +6780,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      it &#39;- attribute of DATE: birth (&gt; Date.today)&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        expect(Pet.create(user_id: 1, name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today + 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;).valid?).to eq(false)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -6476,100 +6804,100 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="38">
           
-          <code class="ruby">  describe &quot;2. PET:&quot; do</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  #work with attribute of PRESENCE: user_id</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="41">
           
-          <code class="ruby">    it &#39;a.) NOT belong to USER - Invalid creation&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(Pet.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;).valid?).to eq(false)</code>
+          <code class="ruby">  describe &quot;2. PET:&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  #work with attribute of PRESENCE: user_id</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;b.) YES belong to USER - Valid creation&#39; do</code>
+          <code class="ruby">    it &#39;a.) NOT belong to USER - Invalid creation&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">      user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
+          <code class="ruby">      expect(Pet.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;).valid?).to eq(false)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      user.save</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;).valid?).to eq(true)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="53">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;3. METHODS:&quot; do</code>
+          <code class="ruby">    it &#39;b.) YES belong to USER - Valid creation&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;).valid?).to eq(true)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
@@ -6578,64 +6906,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="55">
           
-          <code class="ruby">    before(:each) do</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="56">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      @user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="57">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      @user.save</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="58">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      @pet = @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="59">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      @user.pets.create(name: &quot;juancho&quot;, animal: &quot;reptile&quot;,  birth: Date.today - 1.month, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;.return_with_criterial return sort_list&#39; do</code>
+          <code class="ruby">  describe &quot;3. METHODS:&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="58">
           
-          <code class="ruby">      last_animal = Pet.desc_sorted_by_id[0]</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(last_animal).to eq(Pet.last)</code>
+          <code class="ruby">    before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="60">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="61">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @user.save</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="62">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @pet = @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="63">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @user.pets.create(name: &quot;negrito&quot;, animal: &quot;dog&quot;,  birth: Date.today - 7.day, image: &quot;https://www.petfinder.com/wp-content/uploads/2012/11/93394608-pets-welcome-policy-632x475.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="64">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @user.pets.create(name: &quot;juancho&quot;, animal: &quot;reptile&quot;,  birth: Date.today - 1.month, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
@@ -6671,7 +6999,7 @@
         <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(Pet.last.age).to include(&#39;months&#39;)  </code>
+          <code class="ruby">        expect(Pet.last.age).to include(&#39;months&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
@@ -6683,19 +7011,19 @@
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;if pet age is &gt;= 1 year&#39; do</code>
+          <code class="ruby">      it &#39;if pet age is: &lt; 1 year &amp;&amp; &lt; month&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(Pet.first.age).to include(&#39;years&#39;)  </code>
+          <code class="ruby">        expect(Pet.all[1].age).to include(&#39;days&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
@@ -6707,31 +7035,31 @@
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      it &#39;if pet age is &gt;= 1 year&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">        expect(Pet.first.age).to include(&#39;years&#39;)  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="80">
           
-          <code class="ruby">  describe &#39;4. INSTANCE AND CLASS ATTRIBUTES&#39; do</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
@@ -6740,160 +7068,160 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;4. INSTANCE AND CLASS ATTRIBUTES&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
           <code class="ruby">    before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="83">
+        <li class="covered" data-hits="4" data-linenumber="87">
           <span class="hits">4</span>
           
           <code class="ruby">      @user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="84">
+        <li class="covered" data-hits="4" data-linenumber="88">
           <span class="hits">4</span>
           
           <code class="ruby">      @user.save</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="85">
+        <li class="covered" data-hits="4" data-linenumber="89">
           <span class="hits">4</span>
           
           <code class="ruby">      @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="86">
+        <li class="covered" data-hits="4" data-linenumber="90">
           <span class="hits">4</span>
           
           <code class="ruby">      @pet = @user.pets.first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="89">
+        <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
           <code class="ruby">    context &#39;after find&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">          </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
           <code class="ruby">      it &#39;.user_name return user.name&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(@pet.user_name).to eq(@user.name)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="never" data-hits="" data-linenumber="97">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="95">
+        <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
           <code class="ruby">      it &#39;.images_urls return hash with all urls img_styles&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="96">
+        <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(@pet.images_urls[:original]).to be_a_kind_of(String)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(@pet.images_urls[:zoom]).to be_a_kind_of(String)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(@pet.images_urls[:thumb]).to be_a_kind_of(String)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="100">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="101">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &#39;.animal_species return pet species&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="102">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        expect(@pet.animal_species[0]).to be_a_kind_of(String)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        expect(@pet.animal_species).to be_a_kind_of(Array)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      it &#39;.animal_species return pet species&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;.age return how old is the pet&#39; do</code>
+          <code class="ruby">        expect(@pet.animal_species[0]).to be_a_kind_of(String)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(@pet.age).to be_a_kind_of(String)</code>
+          <code class="ruby">        expect(@pet.animal_species).to be_a_kind_of(Array)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="108">
@@ -6908,22 +7236,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      it &#39;.age return how old is the pet&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">        expect(@pet.age).to be_a_kind_of(String)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="112">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
@@ -6933,6 +7261,126 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;5. SCOPES to:&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user = User.create(name: &quot;raul&quot;, email: &quot;raul@gmail.com&quot;, password: &quot;12345678&quot;, password_confirmation: &quot;12345678&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @pet = @user.pets.create(name: &quot;lola&quot;, animal: &quot;cat&quot;, birth: Date.today - 10.years, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user.pets.create(name: &quot;juancho&quot;, animal: &quot;reptile&quot;,  birth: Date.today - 1.month, image: &quot;https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAYfAAAAJDg1MmIxYWQ1LTMwMDgtNDdjZC04MzZlLWVlYTUwZDQyNmUwOQ.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;.desc_sorted_by_id return a desc_sort_list_by_id of pets&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      last_animal = Pet.desc_sorted_by_id[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(last_animal).to eq(Pet.last)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
           
           
           <code class="ruby">end</code>

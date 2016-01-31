@@ -26,6 +26,7 @@ class Pet < ActiveRecord::Base
   validates :name, :animal, :user_id, presence: true
   validates :name, length: { maximum: 15 }
   validates :animal, inclusion: { in: @@animal_species }
+  validates_date :birth, :on_or_before => :today
 
   belongs_to :user
 
@@ -39,16 +40,15 @@ class Pet < ActiveRecord::Base
       #this condition fix when the year has changed but days < 364
       range_date = self.birth..Date.today
       number_days = range_date.reduce(0) {|s,d| s + 1}
-      condition_year_fix = number_days < 364
+      condition_below_a_year_fix = number_days < 364
 
       #this condition show when age < month
-      condition_month_fix = Date.today.day < self.birth.day && number_months == 1 
+      condition_below_a_month_fix = Date.today.day < self.birth.day && number_months <= 1 
 
-      if number_years == 0 || condition_year_fix
-        if condition_month_fix
-          days_present_month = Date.today.day
-          days_past_month = self.birth.end_of_month.day - self.birth.day
-          number_days = days_past_month + days_present_month
+      if number_months == 0 && number_years == 0
+        age_string = "#{number_days} days"
+      elsif number_years == 0 || condition_below_a_year_fix
+        if condition_below_a_month_fix
           age_string = "#{number_days} days"
         else
           number_months = 12 - number_months.abs if number_months < 0

@@ -19,7 +19,7 @@
     <%= f.label :birth, :class => 'sr-only' %><br />
     <div class="input-group">
       <div class="input-group-addon">Age's pet</div>
-      <%= f.date_select :birth, :class => 'form-control' %>
+      <%= f.date_select :birth, :class => 'form-control', order: [:day, :month, :year], :max_years_allowed => 20, :end_year => Date.today.year %>
     </div>
     
     <%= f.label :image, :class => 'sr-only' %><br />

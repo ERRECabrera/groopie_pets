@@ -13,6 +13,11 @@
   cursor: pointer;
 }
 
+figcaption {
+  background-color: rgba(217, 237, 247, 0.7) !important;
+  color: rgb(52, 52, 52) !important;
+}
+
 .alert{
   height: 50px;
 }
@@ -32,6 +37,29 @@ form {
 
 #form-img-sample {
   width: 100%;
+}
+
+div.close-form{
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  line-height: 100%;
+  cursor: pointer;  
+}
+
+#image_input_text {
+  text-align: center;
+}
+
+select {
+  //font-size: 1.5em;
+  height: 28px;
+  color: #555;
+}
+
+.plus-pet {
+  cursor: pointer;
 }
 
 #plus-pet {

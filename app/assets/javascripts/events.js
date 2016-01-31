@@ -1,4 +1,6 @@
 function form_events(){
+
+  if ($('.close-form').is(':hidden')) $('.close-form').toggle();
   
   $('#btn-image').on('click',function(){
     $('#input-img-file').click();
@@ -11,12 +13,12 @@ function form_events(){
 
   manage_buttons();
 
-  empty_form_save();
-  empty_form_update_or_delete()
+  close_form();
+  update_a_pet();
 
 };
 
-function load_form(){
+function event_images(){
   
   update_a_pet();
   add_a_new_pet();
@@ -29,3 +31,12 @@ function log_out(){
   });
 };
 
+function unbind_events_form(){
+  //$('figure.link_to_form').off('click');
+  $('.plus-pet').off('click');
+  $('.close-form').on('click');
+  $('.update-form').off('click');
+  $('.delete-form').off('click');
+  $('#btn-image').off('click');
+  $('#input-img-file').off('change');
+};

@@ -1,3 +1,9 @@
+function expand_form(html_form){
+  setTimeout(function(){
+    $("body, html").animate({ scrollTop: $('#myForm').offset().top }, 2000);
+  }, 2000);
+};
+
 function refresh_sample_img(){
   var img_file = document.getElementById('input-img-file').files[0];
   var file = img_file;
@@ -45,32 +51,27 @@ function manage_buttons(){
 };
 
 function add_a_new_pet(){
-  $('#plus-pet').on('click', function(){
-    $('#plus-pet').off('click');
+  $('.plus-pet').on('click', function(){
+    unbind_events_form();
     get_html_form_from_api(null);
   });  
 };
 
 function update_a_pet(){
   $('figure.link_to_form').on('click',function(event){
-    $('figure.link_to_form').off('click');
+    unbind_events_form();
     var id = $(event.currentTarget).attr('data-id');
     get_html_form_from_api(id);
   });
 };
 
-function empty_form_save(){
-  $('#plus-pet').on('click',function(){
+function close_form(){
+  $('.close-form').on('click',function(){
+    if ($('.close-form').is(':visible')) $('.close-form').toggle();
     $('#myForm').empty();
-    $('#plus-pet').off('click');
+    if ($('#myForm').is(':visible')) $('#myForm').toggle();
+    unbind_events_form();
+    $("body, html").animate({ scrollTop: $('.blockquote-reverse').offset().top }, 1000)
     add_a_new_pet();
-  });
-};
-
-function empty_form_update_or_delete(){
-  $('figure.link_to_form').on('click',function(){
-    $('#myForm').empty();
-    $('figure.link_to_form').off('click');
-    update_a_pet();
   });
 };
